@@ -4,11 +4,6 @@ import java.util.*;
 import java.util.logging.Logger;
 
 public class Main {
-    // Задача 1
-    public static List<Integer> reversList(List<Integer> list) {
-        Collections.reverse(list);
-        return list;
-    }
 
     public static void main(String[] args) {
         // "Перевернутый" список (Задача 1)
@@ -38,7 +33,13 @@ public class Main {
         logger.info(getPostfixForm("(23+y)/(0 * (34-5)^z)"));
     }
 
-    // Перевод в постфиксную форму
+    // Задача 1
+    public static List<Integer> reversList(List<Integer> list) {
+        Collections.reverse(list);
+        return list;
+    }
+
+    // Получаем постфиксную форму выражения (Задача 4)
     public static String getPostfixForm(String string) {
         string = string.replaceAll("\\s*","");
         Stack<Character> stack = new Stack();
@@ -78,7 +79,7 @@ public class Main {
         return postfixExpression.toString();
     }
 
-    // Получаем приоритет оператора
+    // Получаем приоритет оператора (Задача 4)
     public static int getPriority(char simbol) {
         final Map<Character, Integer> map = Map.of(
                 '(', 0,

@@ -41,7 +41,7 @@ public class Calculator extends JFrame {
             String simbol = operations.get(i);
             JButton temp = new JButton(simbol);
             temp.setVisible(true);
-            temp.addActionListener(e -> actionPerformed(e,jTextField));
+            temp.addActionListener(e -> actionPerformed(e, jTextField));
             jButtonList.add(temp);
         }
         JPanel jPanel = new JPanel();
